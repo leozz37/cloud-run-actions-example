@@ -10,7 +10,7 @@ jobs:
 
     deploy:
       
-        name: Setup Gcloud Account
+        name: Deploy
         runs-on: ubuntu-latest
         env:
           IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.GCP_APP_NAME }}
@@ -19,7 +19,7 @@ jobs:
         - name: Login
           uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
           with:
-            GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+            project_id: ${{ secrets.GCP_PROJECT_ID }}
             service_account_email: ${{ secrets.GCP_EMAIL }}
             service_account_key: ${{ secrets.GCP_CREDENTIALS }}
             

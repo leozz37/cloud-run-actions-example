@@ -15,7 +15,7 @@ type Phrase struct {
 
 func HelloWorld() Phrase {
 	return Phrase{
-		Text: "Hello World!",
+		Text: "Hello World",
 	}
 }
 

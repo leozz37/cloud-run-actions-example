@@ -7,7 +7,7 @@ import (
 func TestHelloWorld(t *testing.T) {
 	var expected Phrase
 
-	expected.Text = "Hello Medium!"
+	expected.Text = "Hello World!"
 	result := HelloWorld()
 
 	if expected.Text != result.Text {
